@@ -41,25 +41,14 @@ const Header = () => {
             : 'bg-gradient-to-b from-black/30 via-black/10 to-transparent h-24'
         }`}
       >
-      <div className="container-custom px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="flex items-center justify-between py-4 min-w-0">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0"
           >
-            {/* <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-              isScrolled 
-                ? 'bg-accent-blue' 
-                : 'bg-white/20 backdrop-blur-sm border border-white/30'
-            }`}>
-              <span className={`font-combat font-bold text-lg ${
-                isScrolled ? 'text-white' : 'text-white'
-              }`}>
-                K
-              </span>
-            </div> */}
-            <span className={`text-xl font-combat font-bold ${
+            <span className={`text-lg sm:text-xl font-combat font-bold ${
               isScrolled ? 'text-text-dark' : 'text-white drop-shadow-lg'
             }`}>
               KUDO
@@ -67,7 +56,7 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 flex-shrink-0">
             {navItems.map((item) => (
               <motion.a
                 key={item.href}
@@ -108,7 +97,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden transition-colors duration-300 ${
+            className={`md:hidden transition-colors duration-300 flex-shrink-0 ml-4 ${
               isScrolled 
                 ? 'text-text-dark hover:text-accent-blue' 
                 : 'text-white hover:text-white/80'
