@@ -36,7 +36,7 @@ const Hero = ({ fighter }: HeroProps) => {
           >
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-combat font-bold text-text-dark tracking-wide">
               Welcome to my <span className="relative inline-block">
-                <span className="relative z-10">portfolio</span>
+                <span className="relative z-10 text-white">portfolio</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-300 via-orange-200 to-orange-400 opacity-70 transform -rotate-2 scale-110 rounded-full blur-sm"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-300 to-orange-200 opacity-50 transform rotate-1 scale-105 rounded-full"></div>
               </span>

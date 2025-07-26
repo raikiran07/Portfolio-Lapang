@@ -63,7 +63,7 @@ const About = ({ fighter }: AboutProps) => {
             <div>
               <div className="relative py-8 px-4 md:px-8">
                 <span className="absolute -top-4 -left-2 md:-top-8 md:-left-6 text-accent-blue text-7xl md:text-9xl font-bold select-none opacity-30 leading-none">"</span>
-                <p className="font-dancing text-xl md:text-2xl text-text-dark italic z-10 relative leading-relaxed">
+                <p className="font-sans text-xl md:text-2xl text-text-dark italic z-10 relative leading-relaxed">
                   {fighter.bio}
                 </p>
                 <span className="absolute -bottom-4 right-2 md:-bottom-8 md:-right-6 text-accent-blue text-7xl md:text-9xl font-bold select-none opacity-30 leading-none">"</span>

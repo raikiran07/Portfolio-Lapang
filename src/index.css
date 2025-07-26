@@ -9,6 +9,11 @@
   
   body {
     @apply bg-primary-white text-text-dark font-fighter;
+    overflow-x: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 }
 
