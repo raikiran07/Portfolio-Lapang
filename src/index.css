@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary-white text-text-dark font-fighter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-blue hover:bg-accent-indigo text-white font-bold py-3 px-6 rounded-lg border-2 border-accent-blue hover:border-accent-indigo transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-6xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+  }
+
+  .section-bg {
+    @apply bg-primary-light;
+  }
+
+  .kudo-loader {
+    @apply flex items-center justify-center space-x-2;
+  }
+
+  .kudo-kick {
+    @apply w-4 h-4 bg-accent-blue rounded-full animate-kudo-kick;
+  }
+
+  .kudo-punch {
+    @apply w-4 h-4 bg-accent-indigo rounded-full animate-kudo-punch;
+  }
+
+  .kudo-block {
+    @apply w-4 h-4 bg-accent-purple rounded-full animate-kudo-block;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+} 
