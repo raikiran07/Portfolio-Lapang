@@ -27,6 +27,22 @@ const Hero = ({ fighter }: HeroProps) => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
+          {/* Welcome Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-combat font-bold text-text-dark tracking-wide">
+              Welcome to my <span className="relative inline-block">
+                <span className="relative z-10">portfolio</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-300 via-orange-200 to-orange-400 opacity-70 transform -rotate-2 scale-110 rounded-full blur-sm"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-300 to-orange-200 opacity-50 transform rotate-1 scale-105 rounded-full"></div>
+              </span>
+            </h3>
+          </motion.div>
+
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -44,8 +60,14 @@ const Hero = ({ fighter }: HeroProps) => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="inline-block"
           >
-            <span className="text-3xl md:text-4xl font-sport font-bold text-accent-blue tracking-wide">
-              "{fighter.nickname}"
+            <span className="text-3xl md:text-4xl font-sport font-bold text-text-dark tracking-wide">
+              "<span className="relative inline-block group">
+                <span className="relative z-10">{fighter.nickname}</span>
+               
+                {/* Animated Underline */}
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
+                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 transform scale-x-0 animate-pulse" style={{ animationDelay: '1s' }}></div>
+              </span>"
             </span>
           </motion.div>
 

@@ -43,12 +43,12 @@ const About = ({ fighter }: AboutProps) => {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <div 
-                className="w-full h-96 md:h-[500px] bg-cover bg-center bg-no-repeat"
+                className="w-full h-96 md:h-[500px] bg-cover bg-center bg-no-repeat opacity-60"
                 style={{
-                  backgroundImage: `url('https://images.pexels.com/photos/573945/pexels-photo-573945.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')`,
+                  backgroundImage: `url('https://images.pexels.com/photos/6295789/pexels-photo-6295789.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop&crop=face')`,
                 }}
               ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
             </div>
           </motion.div>
 
