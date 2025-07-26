@@ -7,14 +7,17 @@ interface HeroProps {
 
 const Hero = ({ fighter }: HeroProps) => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-light to-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent-blue rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-accent-purple rounded-full"></div>
-        <div className="absolute top-1/2 left-5 w-16 h-16 bg-accent-indigo rounded-full"></div>
-        <div className="absolute top-1/3 right-8 w-20 h-20 bg-accent-blue rounded-full"></div>
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Faded Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-45"
+        style={{
+          backgroundImage: "url('https://images.pexels.com/photos/6296012/pexels-photo-6296012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')"
+        }}
+      ></div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white"></div>
 
       {/* Content */}
       <div className="relative z-10 container-custom px-4 text-center">
@@ -22,69 +25,48 @@ const Hero = ({ fighter }: HeroProps) => {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-12"
         >
-          {/* Name and Nickname */}
-          <div className="space-y-4">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-8xl lg:text-9xl font-kudo font-black text-text-dark"
-            >
-              {fighter.name}
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block"
-            >
-              <span className="text-2xl md:text-3xl font-kudo font-bold text-accent-blue bg-white px-6 py-2 border-2 border-accent-blue">
-                "{fighter.nickname}"
-              </span>
-            </motion.div>
-          </div>
+          {/* Name */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-7xl md:text-8xl lg:text-9xl font-combat font-black text-text-dark tracking-wider"
+          >
+            {fighter.name}
+          </motion.h1>
+
+          {/* Nickname */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="inline-block"
+          >
+            <span className="text-3xl md:text-4xl font-sport font-bold text-accent-blue tracking-wide">
+              "{fighter.nickname}"
+            </span>
+          </motion.div>
 
           {/* Tagline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="space-y-4"
+            className="max-w-2xl mx-auto"
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-fighter text-text-gray max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-xl md:text-2xl font-fighter text-text-gray leading-relaxed font-medium">
               {fighter.tagline}
             </h2>
-            <div className="w-24 h-1 bg-accent-blue mx-auto"></div>
-          </motion.div>
-
-          {/* Disciplines */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {fighter.disciplines.map((discipline, index) => (
-              <motion.span
-                key={discipline}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                className="bg-accent-blue text-white font-bold px-4 py-2 text-sm md:text-base border-2 border-accent-blue hover:bg-transparent hover:text-accent-blue transition-all duration-300"
-              >
-                {discipline}
-              </motion.span>
-            ))}
           </motion.div>
 
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
           >
             <motion.a
               href="#gallery"
@@ -110,7 +92,7 @@ const Hero = ({ fighter }: HeroProps) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div

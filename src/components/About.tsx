@@ -45,7 +45,7 @@ const About = ({ fighter }: AboutProps) => {
               <div 
                 className="w-full h-96 md:h-[500px] bg-cover bg-center bg-no-repeat"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop')`,
+                  backgroundImage: `url('https://images.pexels.com/photos/573945/pexels-photo-573945.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')`,
                 }}
               ></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

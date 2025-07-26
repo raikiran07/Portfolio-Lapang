@@ -1,7 +1,7 @@
 import { Fighter } from '../types';
 
 export const fighterData: Fighter = {
-  name: "Alex Rodriguez",
+  name: "TAM LAPANG",
   nickname: "Thunder",
   tagline: "Passionate Fighter, Dedicated Athlete",
   disciplines: ["MMA", "Boxing", "Muay Thai"],

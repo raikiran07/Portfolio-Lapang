@@ -59,6 +59,7 @@ export interface GalleryImage {
   alt: string;
   category: 'training' | 'fight' | 'championship' | 'team' | 'personal';
   title?: string;
+  isVideo?: boolean;
 }
 
 export interface NavigationItem {

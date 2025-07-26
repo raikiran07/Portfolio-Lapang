@@ -35,6 +35,8 @@ export default {
         'display': ['Poppins', 'Inter', 'sans-serif'],
         'dancing': ['Dancing Script', 'cursive'],
         'kudo': ['Orbitron', 'monospace'],
+        'combat': ['Bebas Neue', 'Impact', 'Arial Black', 'sans-serif'],
+        'sport': ['Roboto Condensed', 'Arial Narrow', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
